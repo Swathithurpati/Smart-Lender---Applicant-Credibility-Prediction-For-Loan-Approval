@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict</title>
+</head>
+<body>
+    <form action="{{ url_for('predict') }}" method="post">
+        <!-- Your form content here -->
+        <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br>
+
+            <label for="married">Married:</label>
+            <input type="radio" id="married" name="married" value="yes"> Yes
+            <input type="radio" name="married" value="no"> No
+
+            <br><br>
+            <label for="dependents">Dependents:</label>
+            <input type="number" id="dependents" name="dependents" min="0">
+            <br><br>
+
+            <label for="education">Education:</label>
+            <input type="radio" id="education" name="education" value="graduate"> Graduate
+            <input type="radio" name="education" value="not_graduate"> Not Graduate
+            <br><br>
+
+            <label for="selfEmployed">Self Employed:</label>
+            <input type="radio" id="selfEmployed" name="selfEmployed" value="yes"> Yes
+            <input type="radio" name="selfEmployed" value="no"> No
+            <br><br>
+
+            <label for="applicantIncome">Applicant Income:</label>
+            <input type="number" id="applicantIncome" name="applicantIncome" min="0">
+            <br><br>
+
+            <label for="coApplicantIncome">Co-Applicant Income:</label>
+            <input type="number" id="coApplicantIncome" name="coApplicantIncome" min="0">
+            <br><br>
+
+            <label for="loanAmount">Loan Amount:</label>
+            <input type="number" id="loanAmount" name="loanAmount" min="0">
+            <br><br>
+
+            <label for="loanAmountTerm">Loan Amount Term:</label>
+            <input type="number" id="loanAmountTerm" name="loanAmountTerm" min="0">
+            <br><br>
+            
+            <label for="creditHistory">Credit History:</label>
+            <select id="creditHistory" name="creditHistory">
+                <option value="1.0">Good (1.0)</option>
+                <option value="0.0">Not Good (0.0)</option>
+            </select>
+            <br><br>
+            <label for="propertyArea">Property Area:</label>
+            <select id="propertyArea" name="propertyArea">
+                <option value="urban">Urban</option>
+                <option value="semiurban">Semi-Urban</option>
+                <option value="rural">Rural</option>
+            </select>
+            <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
